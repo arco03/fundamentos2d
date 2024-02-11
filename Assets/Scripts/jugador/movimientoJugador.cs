@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class movimientoJugador : MonoBehaviour
@@ -7,15 +5,22 @@ public class movimientoJugador : MonoBehaviour
     public float speed;
     public int x;
     public int y;
-    public bool canMove;
+    private bool canMove;
+    public GameObject balaJugador;
+    public GameObject posicionBala;
 
     private void Awake()
     {
         canMove = true;
     }
-
     private void Update()
     {
+        if(Input.GetKeyDown("space"))
+        {
+            GameObject bala = (GameObject)Instantiate(balaJugador);
+            bala.transform.position = posicionBala.transform.position;
+
+        }
         int moveX = (int)Input.GetAxisRaw("Horizontal");
         if (moveX != 0 && canMove)
         {
