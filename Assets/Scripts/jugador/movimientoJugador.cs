@@ -8,6 +8,7 @@ public class movimientoJugador : MonoBehaviour
     private bool canMove;
     public GameObject balaJugador;
     public GameObject posicionBala;
+    public string Horizontal, disparo;
 
     private void Awake()
     {
@@ -15,13 +16,13 @@ public class movimientoJugador : MonoBehaviour
     }
     private void Update()
     {
-        if(Input.GetKeyDown("space"))
+        if(Input.GetKeyDown(disparo))
         {
             GameObject bala = (GameObject)Instantiate(balaJugador);
             bala.transform.position = posicionBala.transform.position;
 
         }
-        int moveX = (int)Input.GetAxisRaw("Horizontal");
+        int moveX = (int)Input.GetAxisRaw(Horizontal);
         if (moveX != 0 && canMove)
         {
             x += moveX;
