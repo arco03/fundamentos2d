@@ -5,15 +5,17 @@ using UnityEngine;
 public class movimientoEnemigo : MonoBehaviour
 {
     public float velocidad;
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
+ 
     void Update()
     {
         transform.Translate(Vector2.right * velocidad * Time.deltaTime);
-    
+       
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "colision")
+        {
+            velocidad *= -1;
+        }
     }
 }
