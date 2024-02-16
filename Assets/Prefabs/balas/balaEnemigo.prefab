@@ -10,15 +10,15 @@ GameObject:
   m_Component:
   - component: {fileID: 356031988256230982}
   - component: {fileID: 9143706063637122501}
-  - component: {fileID: 6735281365104973102}
   - component: {fileID: 2417128788954044816}
   - component: {fileID: 5933740721170008684}
+  - component: {fileID: 6735281365104973102}
   m_Layer: 7
   m_Name: balaEnemigo
   m_TagString: colision
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &356031988256230982
 Transform:
@@ -87,19 +87,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &6735281365104973102
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6118922498116217025}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 632c20b5c7504e74e84b3ba2a13a2c15, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  velocidadBala: 5
 --- !u!61 &2417128788954044816
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -129,7 +116,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -172,3 +159,16 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &6735281365104973102
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6118922498116217025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 632c20b5c7504e74e84b3ba2a13a2c15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocidadBala: 5

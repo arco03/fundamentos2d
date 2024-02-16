@@ -5,30 +5,11 @@ using UnityEngine.UI;
 
 public class vistaVida : MonoBehaviour
 {
-    public Sprite vida1;
-    public Sprite vida2;
-    public Sprite vida3;
+    public GameObject[] vidas;
 
-    private Image imageRender;
-
-    private void Awake()
+    public void DesactivarVida(int i)
     {
-        imageRender = GetComponent<Image>();
+        vidas[i].SetActive(false);
     }
 
-    public void UpdateHeart(int lives)
-    {
-    //   // switch (lives)
-    //    {
-    //        case 2:
-    //            imageRender.sprite = fullHeart;
-    //            break;
-    //        case 1:
-    //            imageRender.sprite = halfHeart;
-    //            break;
-    //        case 0:
-    //            imageRender.sprite = emptyHeart;
-    //            break;
-    //    }
-    }
 }

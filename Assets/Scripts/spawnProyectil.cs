@@ -6,8 +6,8 @@ public class spawnProyectil : MonoBehaviour
 {
     public GameObject balaEnemigo;
     public float tiempoSpawn;
-    public float spawnMax = 10;
-    public float spawnMin = 5;
+    public float spawnMax ;
+    public float spawnMin ;
 
     private void Start()
     {
@@ -21,6 +21,7 @@ public class spawnProyectil : MonoBehaviour
             Instantiate(balaEnemigo, transform.position, Quaternion.identity);
             tiempoSpawn = Random.Range(spawnMin, spawnMax);
         }
+       
         
     }
 }

@@ -9,10 +9,12 @@ public class movimientoJugador : MonoBehaviour
     public GameObject balaJugador;
     public GameObject posicionBala;
     public string Horizontal, disparo;
+    private Rigidbody2D rb;
 
     private void Awake()
     {
         canMove = true;
+        rb = GetComponent<Rigidbody2D>();
     }
     private void Update()
     {
@@ -29,12 +31,12 @@ public class movimientoJugador : MonoBehaviour
             canMove = false;
         }
 
-        Vector2 currentPosition = new Vector2(
+        Vector2 posicionActual = new Vector2(
             transform.position.x,
             transform.position.y
             );
 
-        if (currentPosition == CalcularDireccion(x, y))
+        if (posicionActual == CalcularDireccion(x, y))
         {
             canMove = true;
         }
@@ -44,6 +46,7 @@ public class movimientoJugador : MonoBehaviour
     private void FixedUpdate()
     {
         Vector2 finalPosition = CalcularDireccion(x, y);
+        //rb.velocity = new Vector2(finalPosition, rb.velocity.x);
         transform.position = Vector2.MoveTowards(transform.position, finalPosition, speed);
     }
 

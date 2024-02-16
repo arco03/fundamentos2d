@@ -242,7 +242,7 @@ GameObject:
   - component: {fileID: 45315581}
   - component: {fileID: 45315580}
   m_Layer: 5
-  m_Name: vida2J1
+  m_Name: vida1J1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -317,7 +317,7 @@ GameObject:
   - component: {fileID: 74154312}
   - component: {fileID: 74154311}
   m_Layer: 5
-  m_Name: vida2J2
+  m_Name: vida1J2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -412,7 +412,7 @@ GameObject:
   - component: {fileID: 377862795}
   - component: {fileID: 377862794}
   m_Layer: 5
-  m_Name: vida3J1
+  m_Name: vida0J1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -605,7 +605,7 @@ GameObject:
   - component: {fileID: 438600434}
   - component: {fileID: 438600433}
   m_Layer: 5
-  m_Name: vida1J2
+  m_Name: vida0J2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -851,7 +851,7 @@ GameObject:
   - component: {fileID: 835305949}
   m_Layer: 6
   m_Name: jugador2
-  m_TagString: Untagged
+  m_TagString: Jugador
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1124,7 +1124,7 @@ GameObject:
   - component: {fileID: 1029291315}
   - component: {fileID: 1029291314}
   - component: {fileID: 1029291317}
-  - component: {fileID: 1029291316}
+  - component: {fileID: 1029291318}
   m_Layer: 5
   m_Name: ImagenVidaJ1
   m_TagString: Untagged
@@ -1192,21 +1192,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1029291312}
   m_CullTransparentMesh: 1
---- !u!114 &1029291316
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1029291312}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cb46ef39110d5dd41b982dc46f699c6d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  vida1: {fileID: -2076761276, guid: f66e3c708c8df9d4da2a0e505e1585cc, type: 3}
-  vida2: {fileID: -2076761276, guid: f66e3c708c8df9d4da2a0e505e1585cc, type: 3}
-  vida3: {fileID: -2076761276, guid: f66e3c708c8df9d4da2a0e505e1585cc, type: 3}
 --- !u!114 &1029291317
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1219,10 +1204,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66e0e9d724fe7b040a10cafd9e3656ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hearthViews:
-  - {fileID: 1029291316}
-  - {fileID: 0}
-  - {fileID: 0}
+  vistaVida: {fileID: 1029291318}
+--- !u!114 &1029291318
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1029291312}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb46ef39110d5dd41b982dc46f699c6d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  vidas:
+  - {fileID: 377862792}
+  - {fileID: 45315578}
+  - {fileID: 1092214898}
 --- !u!1 &1070857367
 GameObject:
   m_ObjectHideFlags: 0
@@ -1235,7 +1233,7 @@ GameObject:
   - component: {fileID: 1070857370}
   - component: {fileID: 1070857369}
   m_Layer: 5
-  m_Name: vida3J2
+  m_Name: vida2J2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1384,7 +1382,7 @@ GameObject:
   - component: {fileID: 1092214901}
   - component: {fileID: 1092214900}
   m_Layer: 5
-  m_Name: vida1J1
+  m_Name: vida2J1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1501,9 +1499,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb46ef39110d5dd41b982dc46f699c6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vida1: {fileID: -2076761276, guid: f66e3c708c8df9d4da2a0e505e1585cc, type: 3}
-  vida2: {fileID: -2076761276, guid: f66e3c708c8df9d4da2a0e505e1585cc, type: 3}
-  vida3: {fileID: -2076761276, guid: f66e3c708c8df9d4da2a0e505e1585cc, type: 3}
+  vidas:
+  - {fileID: 438600431}
+  - {fileID: 74154309}
+  - {fileID: 1070857367}
 --- !u!114 &1115666011
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1516,10 +1515,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66e0e9d724fe7b040a10cafd9e3656ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hearthViews:
-  - {fileID: 1115666010}
-  - {fileID: 0}
-  - {fileID: 0}
+  vistaVida: {fileID: 1115666010}
 --- !u!114 &1115666012
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1733,7 +1729,7 @@ GameObject:
   - component: {fileID: 1327097666}
   m_Layer: 6
   m_Name: jugador1
-  m_TagString: Untagged
+  m_TagString: Jugador
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
