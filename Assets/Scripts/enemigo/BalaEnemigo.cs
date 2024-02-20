@@ -7,6 +7,7 @@ public class BalaEnemigo : MonoBehaviour
     public float velocidadBala;
 
     private Rigidbody2D rb;
+  
 
     private void Awake()
     {
@@ -20,16 +21,12 @@ public class BalaEnemigo : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (gameObject.CompareTag("Jugador"))
-        {
-            controladorVida.Instance.PerderVida();
-        }
         Destroy(gameObject);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-       
         Destroy(gameObject);
     }
+
 }

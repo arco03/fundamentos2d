@@ -5,14 +5,10 @@ using UnityEngine.UI;
 
 public class controladorVida : MonoBehaviour
 {
-    public static controladorVida Instance {  get; private set; }
-
-    private int vidas = 3;
     public vistaVida vistaVida;
 
-    public void PerderVida()
+    public void PerderVida(int vidas)
     {
-        vidas -= 1;
         vistaVida.DesactivarVida(vidas);
     }
 }

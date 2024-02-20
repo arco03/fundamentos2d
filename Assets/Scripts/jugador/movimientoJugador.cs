@@ -10,6 +10,8 @@ public class movimientoJugador : MonoBehaviour
     public GameObject posicionBala;
     public string Horizontal, disparo;
     private Rigidbody2D rb;
+    public controladorVida cVida;
+    public int vidas = 3;
 
     private void Awake()
     {
@@ -53,5 +55,16 @@ public class movimientoJugador : MonoBehaviour
     Vector2 CalcularDireccion(int x, int y)
     {
         return new Vector2(x + 0.5f, y + 0f);
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        vidas -= 1;
+        if (vidas <= 0)
+        {
+            //TODO: GameOver este jugador
+            Destroy(gameObject);
+        }
+        cVida.PerderVida(vidas);
     }
 }

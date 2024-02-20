@@ -875,6 +875,8 @@ MonoBehaviour:
   posicionBala: {fileID: 1913916498}
   Horizontal: HorizontalJugador2
   disparo: q
+  cVida: {fileID: 1115666011}
+  vidas: 3
 --- !u!61 &835305950
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1061,7 +1063,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 1010321234}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 20269b49ef09aa642aaea2c6dd496c0b, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -1821,6 +1823,8 @@ MonoBehaviour:
   posicionBala: {fileID: 1091474839}
   Horizontal: HorizontalJugador1
   disparo: space
+  cVida: {fileID: 1029291317}
+  vidas: 3
 --- !u!61 &1327097667
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2288,7 +2292,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 1805286861}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 20269b49ef09aa642aaea2c6dd496c0b, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
