@@ -4,15 +4,17 @@ using UnityEngine;
 
 public class controladorPuntos : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    //public vistaPuntos[] numberValueViews; 
+    public List<vistaPuntos> numberValueViews = new List<vistaPuntos>();
 
-    // Update is called once per frame
-    void Update()
+    public void UpdatePuntos(int puntos)
     {
-        
+        foreach (var item in numberValueViews)
+        {
+            int currentNumber = puntos % 10;
+            puntos /= 10;
+
+            item.SetNumber(currentNumber);
+        }
     }
 }

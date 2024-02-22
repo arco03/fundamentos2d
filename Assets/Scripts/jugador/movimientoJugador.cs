@@ -1,4 +1,5 @@
 using UnityEngine;
+using System;
 
 public class movimientoJugador : MonoBehaviour
 {
@@ -12,6 +13,7 @@ public class movimientoJugador : MonoBehaviour
     private Rigidbody2D rb;
     public controladorVida cVida;
     public int vidas = 3;
+    public event EventHandler MuerteJugador;
 
     private void Awake()
     {
@@ -48,7 +50,6 @@ public class movimientoJugador : MonoBehaviour
     private void FixedUpdate()
     {
         Vector2 finalPosition = CalcularDireccion(x, y);
-        //rb.velocity = new Vector2(finalPosition, rb.velocity.x);
         transform.position = Vector2.MoveTowards(transform.position, finalPosition, speed);
     }
 
@@ -62,7 +63,7 @@ public class movimientoJugador : MonoBehaviour
         vidas -= 1;
         if (vidas <= 0)
         {
-            //TODO: GameOver este jugador
+            MuerteJugador?.Invoke(this, EventArgs.Empty);
             Destroy(gameObject);
         }
         cVida.PerderVida(vidas);

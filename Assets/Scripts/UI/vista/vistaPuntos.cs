@@ -1,18 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class vistaPuntos : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public List<Sprite> values = new List<Sprite>();
+
+    private Image imageRender;
+
+    private void Awake()
     {
-        
+        imageRender = GetComponent<Image>();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void SetNumber(int number)
     {
-        
+        imageRender.sprite = values[number];
     }
 }
