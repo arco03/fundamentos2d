@@ -4,15 +4,24 @@ using UnityEngine;
 
 public class DisparoJugador : MonoBehaviour
 {
-    public int puntos;
+    public int puntos = 0;
+    private bool colision = false;
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+      
+        Disparo();
+
+        Debug.Log(puntos);
+        puntos++;
+
+    }
+     
     public void Disparo()
     {
         Destroy(gameObject);
-    }
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-            Disparo();
-            puntos += 1;
-            Debug.Log(puntos);
+        colision = true;
+
+
     }
 }

@@ -775,7 +775,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &655647958
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -994,6 +994,7 @@ MonoBehaviour:
   disparo: q
   cVida: {fileID: 1115666011}
   vidas: 3
+  MuerteJugador: {fileID: 655647957}
 --- !u!61 &835305950
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1226,7 +1227,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 655647958}
         m_TargetAssemblyTypeName: MenuGameOver, Assembly-CSharp
         m_MethodName: Menu
         m_Mode: 5
@@ -1903,9 +1904,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   numberValueViews:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 1200153447}
+  - {fileID: 1200153447}
+  - {fileID: 1200153447}
 --- !u!114 &1200153447
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2115,6 +2116,7 @@ MonoBehaviour:
   disparo: space
   cVida: {fileID: 1029291317}
   vidas: 3
+  MuerteJugador: {fileID: 655647957}
 --- !u!61 &1327097667
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2437,7 +2439,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 655647958}
         m_TargetAssemblyTypeName: MenuGameOver, Assembly-CSharp
         m_MethodName: Reiniciar
         m_Mode: 1
@@ -2596,8 +2598,8 @@ MonoBehaviour:
   m_Texture: {fileID: 2800000, guid: cdd4aac47cc86994eb77e7f800e3674a, type: 3}
   m_UVRect:
     serializedVersion: 2
-    x: 1.76
-    y: -0.13
+    x: 1.79
+    y: 25.92
     width: 1.5
     height: 1.5
 --- !u!222 &1703386926
@@ -2690,7 +2692,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 655647958}
         m_TargetAssemblyTypeName: MenuGameOver, Assembly-CSharp
         m_MethodName: Salir
         m_Mode: 1

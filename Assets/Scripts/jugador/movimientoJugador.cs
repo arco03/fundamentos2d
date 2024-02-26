@@ -13,7 +13,8 @@ public class movimientoJugador : MonoBehaviour
     private Rigidbody2D rb;
     public controladorVida cVida;
     public int vidas = 3;
-    public event EventHandler MuerteJugador;
+    //public event EventHandler MuerteJugador;
+    public GameObject MuerteJugador;
 
     private void Awake()
     {
@@ -63,7 +64,9 @@ public class movimientoJugador : MonoBehaviour
         vidas -= 1;
         if (vidas <= 0)
         {
-            MuerteJugador?.Invoke(this, EventArgs.Empty);
+            //MuerteJugador?.Invoke(this, EventArgs.Empty);
+            MuerteJugador.SetActive(true);
+
             Destroy(gameObject);
         }
         cVida.PerderVida(vidas);
